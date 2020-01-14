@@ -94,12 +94,9 @@ public class HelloRestController {
 	@PostMapping("/friends/add")
 	public List<Friend> addFriend(@RequestBody Friend f){
 		System.out.println("In add friend method");
-		System.out.println("Name: " + f.getName());
-		System.out.println("Location: " + f.getLocation());
-		System.out.println("Id: " + f.getId());
-		friends.add(f);
+		System.out.println("Name: " + f.getName())
 		
-		return friends;
+		return null;
 	}
 
 }

@@ -67,8 +67,10 @@ public class HelloRestController {
 		System.out.println(id);	
 		for(int i = 0; i<friends.size();i++) {
 			Friend f = friends.get(i);
+			List<Friend> foundFriends = new ArrayList<Friend>();
 			if(f.getId() == id) {
-				return f;
+				//return f;
+				foundFriends.add(f)
 			}
 		
 		}

@@ -99,7 +99,7 @@ public class HelloRestController {
 		System.out.println("Id: " + f.getId());
 		friends.add(f);
 		
-		return friends;
+		return null;
 	}
 
 }

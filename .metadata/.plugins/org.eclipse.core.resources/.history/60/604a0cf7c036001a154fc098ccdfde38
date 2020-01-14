@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -92,14 +91,8 @@ public class HelloRestController {
 	}
 	
 	@PostMapping("/friends/add")
-	public List<Friend> addFriend(@RequestBody Friend f){
-		System.out.println("In add friend method");
-		System.out.println("Name: " + f.getName());
-		System.out.println("Location: " + f.getLocation());
-		System.out.println("Id: " + f.getId());
-		friends.add(f);
+	public List<Friend> addFriend(){
 		
-		return friends;
 	}
 
 }

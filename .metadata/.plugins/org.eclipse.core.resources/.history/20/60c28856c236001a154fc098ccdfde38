@@ -97,9 +97,8 @@ public class HelloRestController {
 		System.out.println("Name: " + f.getName());
 		System.out.println("Location: " + f.getLocation());
 		System.out.println("Id: " + f.getId());
-		friends.add(f);
 		
-		return friends;
+		return null;
 	}
 
 }

@@ -65,15 +65,19 @@ public class HelloRestController {
 	@GetMapping("/friends/{friendid}")
 	public Friend getFriendById(@PathVariable("friendid") int id) {
 		System.out.println(id);	
+		List<Friend> foundFriends = new ArrayList<Friend>();
 		for(int i = 0; i<friends.size();i++) {
 			Friend f = friends.get(i);
+			
 			if(f.getId() == id) {
-				return f;
+				//return f;
+				foundFriends.add(f)
 			}
 		
 		}
+		return foundFriends;
 		
-		return null;
+		return ;
 	}
 	
 	//@RequestMapping(value = "/friends/{friendid}", method = RequestMethod.DELETE)
