@@ -1,0 +1,13 @@
+package com.example.demo.restapi;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HelloRestController {
+	
+	
+	public String welcome() {
+		return "Hello from Spring Boot!"
+	}
+
+}
