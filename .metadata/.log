@@ -1449,3 +1449,18 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-14 15:08:32.683
 !MESSAGE executing callback sts4.classpath.DTIdOhkp SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-14 16:01:57.495
+!MESSAGE Preparing classpath changed notification 001HelloWorld-Wizard
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-14 16:01:57.547
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-14 16:01:57.576
+!MESSAGE classpath=89 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-14 16:01:57.595
+!MESSAGE executing callback sts4.classpath.DTIdOhkp 001HelloWorld-Wizard false 89
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-01-14 16:01:57.684
+!MESSAGE executing callback sts4.classpath.DTIdOhkp SUCCESS [done]
