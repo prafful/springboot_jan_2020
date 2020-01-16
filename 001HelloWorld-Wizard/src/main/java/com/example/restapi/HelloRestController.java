@@ -1,4 +1,4 @@
-package com.example.demo.restapi;
+package com.example.restapi;
 
 import java.util.List;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.demo.pojo.Friend;
-import com.example.demo.service.FriendService;
+import com.example.pojo.Friend;
+import com.example.service.FriendService;
 
 @RestController
 @RequestMapping("api")

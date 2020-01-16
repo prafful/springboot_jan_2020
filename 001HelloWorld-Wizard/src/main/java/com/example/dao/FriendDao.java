@@ -1,11 +1,11 @@
-package com.example.demo.dao;
+package com.example.dao;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.demo.pojo.Friend;
+import com.example.pojo.Friend;
 
 @Repository("friendDao")
 public class FriendDao {
