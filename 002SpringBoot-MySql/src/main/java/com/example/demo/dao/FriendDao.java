@@ -45,4 +45,14 @@ public class FriendDao {
 		return friendRepository.findAll();
 	}
 
+	public List<Friend> deleteFriend(int id) {
+		// TODO Auto-generated method stub
+		//Friend f = friendRepository.findById(id).orElse(new Friend());
+		//if(f.getName() != null) {
+		friendRepository.deleteById(id);
+		//}
+		//friendRepository.delete(entity);
+		return friendRepository.findAll();
+	}
+
 }
