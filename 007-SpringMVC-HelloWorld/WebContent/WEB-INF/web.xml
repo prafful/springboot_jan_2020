@@ -5,14 +5,15 @@
     <welcome-file>index.jsp</welcome-file>
     
   </welcome-file-list>
+  <absolute-ordering></absolute-ordering>
   <servlet>
-  	<servlet-name>springmvc-hello</servlet-name>
+  	<servlet-name>springmvc-001</servlet-name>
   	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
   	<load-on-startup>1</load-on-startup>
   </servlet>
   
   <servlet-mapping>
-  	<servlet-name>springmvc-hello</servlet-name>
+  	<servlet-name>springmvc-001</servlet-name>
   	<url-pattern>/</url-pattern>
   </servlet-mapping>
   

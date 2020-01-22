@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>Spring MVC</h1>
-	<h4>1</h4>
+	<h4>4</h4>
 </body>
 </html>

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HelloController {
+public class FirstSpringMVCHelloController {
 
 	@RequestMapping("/")
 	public String welcome() {
@@ -15,7 +15,8 @@ public class HelloController {
 		 * /WEB-INF/myviews/welcome.jsp
 		 */
 		
-		return "welcome";
+		//return "welcome";
+		return "hello";
 	}
 	
 }
