@@ -9,7 +9,7 @@
 							http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 <!-- where will request look for controller -->
-<context:component-scan base-package="com.springmvc.hello.controller">
+<context:component-scan base-package="com.springmvc.hello">
 </context:component-scan>
 
 <!-- path of where to look for view -->

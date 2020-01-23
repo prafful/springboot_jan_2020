@@ -3,6 +3,7 @@ package com.springboot.storage.restcontroller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -10,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.springboot.storage.entity.TankLocation;
+import com.springboot.storage.entity.TankDetail;
 import com.springboot.storage.entity.WaterTank;
-import com.springboot.storage.repository.TankLocationRepository;
+import com.springboot.storage.repository.TankDetailRepository;
 import com.springboot.storage.repository.WaterTankRepository;
 
 @RestController
@@ -23,7 +24,7 @@ public class TankRestController {
 	private WaterTankRepository waterTankRepository;
 	
 	@Autowired
-	private TankLocationRepository tankLocationRepository;
+	private TankDetailRepository tankDetailRepository;
 	
 	@RequestMapping("/")
 	public String welcome() {
@@ -39,13 +40,18 @@ public class TankRestController {
 	
 	//@RequestMapping(value = "/watertank/add", 
 	//				method = RequestMethod.POST)
-	@PostMapping("/watertank/add")
+	@PostMapping(value = "/watertank/add", consumes = MediaType.APPLICATION_JSON_VALUE)
+	
 	public List<WaterTank> addWaterTank(@RequestBody WaterTank waterTank) {
+		//System.out.println(waterTank.getTankDetail().getLocation());
+		TankDetail td = new TankDetail();
+		td.setLocation(waterTank.getTankDetail().getLocation());
+		waterTank.setTankDetail(td);
 		System.out.println(waterTank.getCapacity());
 		System.out.println(waterTank.getStatus());
 		System.out.println(waterTank.getTankType());
-		System.out.println(waterTank.getTankLocation());
-		waterTankRepository.saveAndFlush(waterTank);
+		System.out.println(waterTank.getTankDetail().getLocation());
+		waterTankRepository.save(waterTank);
 		return waterTankRepository.findAll();
 	}
 	
@@ -70,9 +76,9 @@ public class TankRestController {
 	}
 	
 	@PostMapping("/tanklocation/add")
-	public List<TankLocation> addTankLocation(@RequestBody TankLocation tl){
-		tankLocationRepository.saveAndFlush(tl);
-		return tankLocationRepository.findAll();
+	public List<TankDetail> addTankLocation(@RequestBody TankDetail td){
+		tankDetailRepository.saveAndFlush(td);
+		return tankDetailRepository.findAll();
 	}
 	
 	

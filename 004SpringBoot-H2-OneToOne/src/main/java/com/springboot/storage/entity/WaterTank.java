@@ -3,6 +3,7 @@ package com.springboot.storage.entity;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -10,14 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.Value;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 @Entity
 @Table(name = "water_tank")
 public class WaterTank {
@@ -33,8 +27,63 @@ public class WaterTank {
 	private String status;
 	
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "loc_id")
-	private TankLocation tankLocation;
+	@JoinColumn(name = "id")
+	private TankDetail tankDetail;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getCapacity() {
+		return capacity;
+	}
+
+	public void setCapacity(String capacity) {
+		this.capacity = capacity;
+	}
+
+	public String getTankType() {
+		return tankType;
+	}
+
+	public void setTankType(String tankType) {
+		this.tankType = tankType;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public TankDetail getTankDetail() {
+		return tankDetail;
+	}
+
+	public void setTankDetail(TankDetail tankDetail) {
+		this.tankDetail = tankDetail;
+	}
+
+	public WaterTank(Integer id, String capacity, String tankType, String status, TankDetail tankDetail) {
+		super();
+		this.id = id;
+		this.capacity = capacity;
+		this.tankType = tankType;
+		this.status = status;
+		this.tankDetail = tankDetail;
+	}
+
+	public WaterTank() {
+		super();
+	}
+
+	
 
 	
 	

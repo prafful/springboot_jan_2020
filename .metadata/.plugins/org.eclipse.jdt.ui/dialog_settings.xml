@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Training\CTS\Oct 2019 Spring Boot &amp; Spring Batch\Commons Logging\commons-logging-1.2"/>
+	<item key="org.eclipse.jdt.ui.lastextjar" value="C:\Training\CTS\Oct 2019 Spring Boot &amp; Spring Batch\Spring Framework\property(class java.lang.String, fixed(class java.lang.String, spring-framework))-5.2.0.RELEASE\libs"/>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item key="group_libraries" value="true"/>
 		<item key="layout" value="2"/>
